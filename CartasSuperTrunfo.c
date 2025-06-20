@@ -15,6 +15,9 @@ int main() {
     float area_1, area_2;
     float pib_1, pib_2;
     int pontos_turisticos_1, pontos_turisticos_2;
+    float densidade_1, densidade_2;
+    float pib_per_capita_1, pib_per_capita_2;
+
     printf("Super Trunfo - Jogo de cartas\n");
 
     printf("Digite os dados das cartas:\n");
@@ -35,6 +38,8 @@ int main() {
     scanf("%f", &pib_1);
     printf("Digite o numero de pontos turisticos da Cidade 1: ");
     scanf("%d", &pontos_turisticos_1);
+    densidade_1 = (float) populacao_1 / area_1;
+    pib_per_capita_1 = (float) (pib_1 * 1000000000) / populacao_1;
 
     // Entrada de dados para a carta 2
     printf("Carta 2:\n");
@@ -52,6 +57,8 @@ int main() {
     scanf("%f", &pib_2);
     printf("Digite o numero de pontos turisticos da Cidade 2: ");
     scanf("%d", &pontos_turisticos_2);
+    densidade_2 = (float) populacao_2 / area_2;
+    pib_per_capita_2 = (float) (pib_2 * 1000000000) / populacao_2;
     
     // Exibindo os dados das cartas
     printf("\n");
@@ -63,6 +70,8 @@ int main() {
     printf("Área: %.2f km²\n", area_1);
     printf("PIB: %.2f bilhões de reais\n", pib_1);
     printf("Numero de Pontos Turisticos: %d\n", pontos_turisticos_1);
+    printf("Densidade: %.2f habitantes/km²\n", densidade_1);
+    printf("PIB per capita: %.2f reais\n", pib_per_capita_1);
     printf("\n");
 
     printf("\n");
@@ -74,6 +83,8 @@ int main() {
     printf("Área: %.2f km²\n", area_2);
     printf("PIB: %.2f bilhões de reais\n", pib_2);
     printf("Numero de Pontos Turisticos: %d\n", pontos_turisticos_2);
+    printf("Densidade: %.2f habitantes/km²\n", densidade_2);
+    printf("PIB per capita: %.2f reais\n", pib_per_capita_2);
     printf("\n");
 
     return 0;
